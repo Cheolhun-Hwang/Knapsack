@@ -83,7 +83,7 @@ def data_p08():
 item_size, item_capacity, item_w, item_p, true_y = data_p08()
 knapsack_01 = knapsack(cross_over="one_point", mutation=0.5, population=100,
                         gene_method="general", next_parent=5,
-                        selection="tournament", min_generation=250000)
+                        selection="tournament", min_generation=25)
 opcode, best_gene = knapsack_01.train(capacity=item_capacity, weight=item_w, price=item_p)
 print(">> Best Gene : " + str(best_gene))
 print(">> Optimal Answer : " + str(true_y))
